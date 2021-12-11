@@ -12,20 +12,38 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp \
+    addnewitem.cpp \
+    addnewitem2.cpp \
+    addnewitem3.cpp \
+    mainwindow.cpp\
+    managermain.cpp \
     secondwindow.cpp \
     serverthread.cpp
 
+
 HEADERS += \
     mainwindow.h \
+    addnewitem.h \
+    addnewitem2.h \
+    addnewitem3.h \
+    mainwindow.h\
+    managermain.h \
     secondwindow.h \
     serverthread.h
 
 FORMS += \
     mainwindow.ui \
+    addnewitem.ui \
+    addnewitem2.ui \
+    addnewitem3.ui \
+    mainwindow.ui\
+    managermain.ui \
     secondwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resources.qrc
