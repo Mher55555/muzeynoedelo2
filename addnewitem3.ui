@@ -52,7 +52,7 @@
       <string>Добавить картинку экспоната</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="publish">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -65,7 +65,7 @@
       <string>Опубликовать</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="back2">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -78,7 +78,7 @@
       <string>Назад</string>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -96,7 +96,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QTextEdit" name="textEdit"/>
+       <widget class="QTextEdit" name="opis"/>
       </item>
      </layout>
     </widget>
