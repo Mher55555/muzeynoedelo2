@@ -16,7 +16,7 @@ public:
     ~ManagerMain();
 
 public slots:
-    void on_createitem_clicked();
+    void on_createitem_clicked(/*int row*/);
 signals:
     void showadd();
 private slots:

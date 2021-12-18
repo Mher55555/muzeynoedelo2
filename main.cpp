@@ -3,8 +3,10 @@
 #include <addnewitem.h>
 #include <addnewitem2.h>
 #include <QApplication>
+#include <QtSql/QSqlQuery>
 #include <addnewitem3.h>
 #include <serverthread.h>
+#include  <QtSql/QSql>
 #include <QtSql/QSqlDatabase>
 int main(int argc, char *argv[])
 {
@@ -33,18 +35,32 @@ int main(int argc, char *argv[])
 
     //подключение к локальному базу PostgreSQL
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
-        db.setHostName("127.0.0.1");
-        db.setDatabaseName("adminmuzey");
-        db.setUserName("admin");
-        db.setPassword("admin");
-        if(db.open())
-            qDebug()<<"succes";
-        else
-            qDebug()<<"false";
+
+    //без подключении базы в программе будет много ошибок при запуснке программы поэтому код с базой данных закомментирован
+//    QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
+//        db.setHostName("127.0.0.1");
+//        db.setDatabaseName("adminmuzey");
+//        db.setUserName("admin");
+//        db.setPassword("admin");
+//        if(db.open())
+//            qDebug()<<"succes";
+//        else
+//            qDebug()<<"false";
 
 
     w.show();
 
     return a.exec();
+
+}
+inline bool createTable()
+{
+
+    QSqlQuery query;
+    query.exec("CREATE TABLE imgdb("
+               "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+               "filename TEXT"
+               "imgpath TEXT) ");
+
+ return (1);
 }
