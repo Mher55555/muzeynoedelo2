@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/img"/>
+    <qresource prefix="/new">
+        <file>src/logo.jpg</file>
+        <file>src/lupa.png</file>
+    </qresource>
+</RCC>

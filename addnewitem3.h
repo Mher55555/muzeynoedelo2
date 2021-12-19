@@ -1,7 +1,9 @@
 #ifndef ADDNEWITEM3_H
 #define ADDNEWITEM3_H
 #include <QFile>
+
 #include <QMainWindow>
+#include <addnewitem2.h>
 
 namespace Ui {
 class AddNewItem3;
@@ -18,8 +20,11 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+    void on_publish_clicked();
+    void on_backtoadditem2_clicked();
 
-
+signals:
+    void showadd3();
 private:
     Ui::AddNewItem3 *ui;
 };
