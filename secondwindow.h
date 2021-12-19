@@ -1,22 +1,22 @@
-#ifndef SECONDWINDOW_H
-#define SECONDWINDOW_H
+//#ifndef SECONDWINDOW_H
+//#define SECONDWINDOW_H
 
-#include <QDialog>
+//#include <QDialog>
 
-namespace Ui {
-class Secondwindow;
-}
+//namespace Ui {
+//class Secondwindow;
+//}
 
-class Secondwindow : public QDialog
-{
-    Q_OBJECT
+//class Secondwindow : public QDialog
+//{
+//    Q_OBJECT
 
-public:
-    explicit Secondwindow(QWidget *parent = nullptr);
-    ~Secondwindow();
+//public:
+//    explicit Secondwindow(QWidget *parent = nullptr);
+//    ~Secondwindow();
 
-private:
-    Ui::Secondwindow *ui;
-};
+//private:
+//    Ui::Secondwindow *ui;
+//};
 
-#endif // SECONDWINDOW_H
+//#endif // SECONDWINDOW_H
