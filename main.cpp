@@ -6,8 +6,7 @@
 #include <QtSql/QSqlQuery>
 #include <addnewitem3.h>
 #include <serverthread.h>
-#include  <QtSql/QSql>
-#include <QtSql/QSqlDatabase>
+#include "connection.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -29,36 +28,17 @@ int main(int argc, char *argv[])
 
 
       //проверка работоспособности приложения если серверный поток подключился значит приложение успешно запустился, если нет то это значит что возникла ошибка
-    ServerThread servThread;
+      //    ServerThread servThread;
 
-    servThread.run();
-
-    //подключение к локальному базу PostgreSQL
-    //без подключении базы в программе будет много ошибок при запуснке программы поэтому код с базой данных закомментирован
-//    QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
-//        db.setHostName("127.0.0.1");
-//        db.setDatabaseName("adminmuzey");
-//        db.setUserName("admin");
-//        db.setPassword("admin");
-//        if(db.open())
-//            qDebug()<<"succes";
-//        else
-//            qDebug()<<"false";
-
-
+      //    servThread.run();
+      if(!createConnection()){
+          return 1;
+      }
+      if(!createTable()){
+          return 1;
+      }
     w.show();
 
     return a.exec();
 
-}
-inline bool createTable()
-{
-
-    QSqlQuery query;
-    query.exec("CREATE TABLE imgdb("
-               "id INTEGER PRIMARY KEY AUTOINCREMENT,"
-               "filename TEXT"
-               "imgpath TEXT) ");
-
- return (1);
 }
